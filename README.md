@@ -103,4 +103,4 @@
 
 ---
 
-Doufám, že ti to pomůže pro práci v Obsidianu! 😊 Pokud budeš chtít něco doplnit, dej vědět.
+Doufám, že tento přehled dobře poslouží! 😊
