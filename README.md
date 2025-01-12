@@ -1,3 +1,38 @@
+# Jak klasifikovat proměnné
+
+## 1. Číselné (Numerické)
+- **Charakteristika**: Hodnoty jsou čísla, která mají smysl pro matematické operace (např. sčítání, odčítání, průměr).
+- **Dělení**:
+  - **Spojité (Continuous)**: 
+    - Hodnoty mohou být libovolné na škále (reálná čísla).
+    - **Příklady**: váha, výška, teplota, čas (přesně měřený), vzdálenost.
+  - **Diskrétní (Discrete)**:
+    - Hodnoty jsou obvykle celá čísla a mají pevný počet možností.
+    - **Příklady**: počet dětí, počet kliknutí na webové stránce, počet aut na parkovišti.
+
+## 2. Kategorické (Kvalitativní)
+- **Charakteristika**: Hodnoty vyjadřují kategorie nebo skupiny. Nelze s nimi přímo provádět matematické operace.
+- **Dělení**:
+  - **Nominální (Nominal)**:
+    - Kategorie jsou neuspořádané (nelze je smysluplně seřadit).
+    - **Příklady**: pohlaví (muž/žena), barva očí, typ auta.
+  - **Ordinální (Ordinal)**:
+    - Kategorie jsou uspořádané, ale rozdíly mezi nimi nejsou měřitelné.
+    - **Příklady**: vzdělání (základní, střední, vysoké), hodnocení spokojenosti (nespokojený, neutrální, spokojený).
+
+---
+
+## Další pomůcky
+1. **Je možné hodnoty seřadit?**
+   - Ano: Ordinální.
+   - Ne: Nominální.
+2. **Jsou hodnoty číselné?**
+   - Ano: Číselné.
+   - Ne: Kategorické.
+3. **Může hodnota nabývat nekonečně mnoho různých hodnot v určitém intervalu?**
+   - Ano: Spojité.
+   - Ne: Diskrétní.
+
 # Přehled pravděpodobnostních rozdělení
 
 ## Diskrétní rozdělení
@@ -100,7 +135,3 @@
     ```R
     t.test(vyska, mu = 180)
     ```
-
----
-
-Doufám, že tento přehled dobře poslouží! 😊
