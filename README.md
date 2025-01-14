@@ -114,7 +114,55 @@
 - **Střední hodnota**: \( \mu = \frac{1}{\text{rate}} \)
 - **Rozptyl**: \( \sigma^2 = \frac{1}{\text{rate}^2} \)
 - **Použití**: Například doba do rozpadu radioaktivního atomu.
+---
+```{r}
 
+# --- BINOMICKÉ ROZDĚLENÍ ---
+# Pravděpodobnost přesně 3 úspěchů z 10 pokusů, kde pravděpodobnost úspěchu je 0.5
+binom_exact <- dbinom(3, size = 10, prob = 0.5)
+
+# Pravděpodobnost nejvýše 3 úspěchů
+binom_cumulative <- pbinom(3, size = 10, prob = 0.5)
+
+# Pravděpodobnost více než 3 úspěchů
+binom_more_than <- 1 - pbinom(3, size = 10, prob = 0.5)
+
+# --- HYPERGEOMETRICKÉ ROZDĚLENÍ ---
+# Pravděpodobnost přesně 3 úspěšných výběrů z 10, kde v populaci je 20 úspěšných a 80 neúspěšných
+hyper_exact <- dhyper(3, w = 20, b = 80, n = 10)
+
+# Pravděpodobnost nejvýše 3 úspěšných výběrů
+hyper_cumulative <- phyper(3, w = 20, b = 80, n = 10)
+
+# Pravděpodobnost více než 3 úspěšných výběrů
+hyper_more_than <- 1 - phyper(3, w = 20, b = 80, n = 10)
+
+# --- NORMÁLNÍ ROZDĚLENÍ ---
+# Hustota pravděpodobnosti pro x = 1.5, střední hodnota = 0, směrodatná odchylka = 1
+norm_density <- dnorm(1.5, mean = 0, sd = 1)
+
+# Pravděpodobnost, že hodnota <= 1.5
+norm_cumulative <- pnorm(1.5, mean = 0, sd = 1)
+
+# Pravděpodobnost, že hodnota > 1.5
+norm_more_than <- 1 - pnorm(1.5, mean = 0, sd = 1)
+
+# Hodnota odpovídající 95% pravděpodobnosti
+norm_quantile <- qnorm(0.95, mean = 0, sd = 1)
+
+# --- EXPONENCIÁLNÍ ROZDĚLENÍ ---
+# Hustota pravděpodobnosti pro čas = 2, rychlost = 1
+exp_density <- dexp(2, rate = 1)
+
+# Pravděpodobnost, že čas <= 2
+exp_cumulative <- pexp(2, rate = 1)
+
+# Pravděpodobnost, že čas > 2
+exp_more_than <- 1 - pexp(2, rate = 1)
+
+# Čas odpovídající 95% pravděpodobnosti
+exp_quantile <- qexp(0.95, rate = 1)
+```
 ---
 
 ## Central Limit Theorem (CLT)
